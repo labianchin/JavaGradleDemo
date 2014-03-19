@@ -13,6 +13,7 @@ public class HelloWorld extends HttpServlet {
     }
 
     public static void main(String[] args) throws Exception {
+        //TODO this is not necessary anymore, now we may run through jetty
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
