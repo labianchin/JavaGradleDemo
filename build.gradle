@@ -88,3 +88,4 @@ exclude(module: 'commons-logging')
     /*providedCompile group: 'javax.el', name: 'el-api', version:'1.0'*/
     /*providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'*/
 }
+task stage(dependsOn: ['clean', 'build'])
