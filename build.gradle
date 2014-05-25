@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'jetty'
+apply plugin: 'application'
 
 group = 'com.l433.javademo'
 version = '1.0-SNAPSHOT'
@@ -9,6 +11,8 @@ description = """helloworld-demo"""
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
 
+applicationNam = "HelloWorld Gradle"
+mainClassName = "com.l433.javademo.HelloWorld"
 
 
 repositories {
@@ -88,4 +92,4 @@ exclude(module: 'commons-logging')
     /*providedCompile group: 'javax.el', name: 'el-api', version:'1.0'*/
     /*providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'*/
 }
-task stage(dependsOn: ['clean', 'build'])
+task stage(dependsOn: ['clean', 'installApp'])
